@@ -19,10 +19,11 @@ set(PROJECT_SOURCES
         mainwindow.cpp
         mainwindow.h
         mainwindow.ui
+        resource.qrc
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
-    qt_add_executable(LoginForm
+    qt_add_executable(MainWindow
         MANUAL_FINALIZATION
         ${PROJECT_SOURCES}
     )
