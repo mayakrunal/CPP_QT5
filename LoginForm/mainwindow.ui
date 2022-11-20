@@ -114,6 +114,9 @@ border-radius: 5px;
              <height>25</height>
             </size>
            </property>
+           <property name="echoMode">
+            <enum>QLineEdit::Password</enum>
+           </property>
           </widget>
          </item>
         </layout>
