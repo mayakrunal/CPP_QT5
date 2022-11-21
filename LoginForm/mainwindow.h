@@ -41,6 +41,7 @@ class MainWindow : public QMainWindow {
 
    private slots:
     void btnSubmitClicked();
+    void stackWidgetCurrentPageChanged(int index);
 
    private:
     Ui::MainWindow *ui;

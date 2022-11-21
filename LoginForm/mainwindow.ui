@@ -230,12 +230,12 @@ color: black;
         <item>
          <layout class="QGridLayout" name="gridLayout">
           <item row="0" column="2">
-           <widget class="QFrame" name="chart5">
+           <widget class="QFrame" name="chart3">
             <layout class="QVBoxLayout" name="verticalLayout_10"/>
            </widget>
           </item>
           <item row="1" column="0">
-           <widget class="QFrame" name="chart2">
+           <widget class="QFrame" name="chart4">
             <layout class="QVBoxLayout" name="verticalLayout_3"/>
            </widget>
           </item>
@@ -245,12 +245,12 @@ color: black;
            </widget>
           </item>
           <item row="1" column="1">
-           <widget class="QFrame" name="chart4">
+           <widget class="QFrame" name="chart5">
             <layout class="QVBoxLayout" name="verticalLayout_8"/>
            </widget>
           </item>
           <item row="0" column="1">
-           <widget class="QFrame" name="chart3">
+           <widget class="QFrame" name="chart2">
             <layout class="QVBoxLayout" name="verticalLayout_9"/>
            </widget>
           </item>

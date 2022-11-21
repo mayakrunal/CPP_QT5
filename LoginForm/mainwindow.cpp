@@ -4,13 +4,14 @@
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent), ui(new Ui::MainWindow) {
-    ui->setupUi(this);
 
-    //Set default page to the Login Page
-    ui->stackedWidget->setCurrentWidget(ui->loginPage);
+    ui->setupUi(this);
 
     // Setup Events
     setUpEvents();
+
+    //Set default page to the Login Page
+    ui->stackedWidget->setCurrentWidget(ui->loginPage);
 
     // database connect
     connectdb();
@@ -27,6 +28,7 @@ MainWindow::~MainWindow() {
 
 void MainWindow::setUpEvents(){
     connect(ui->btnSubmit, &QPushButton::clicked, this, &MainWindow::btnSubmitClicked);
+    connect(ui->stackedWidget,&QStackedWidget::currentChanged,this,&MainWindow::stackWidgetCurrentPageChanged);
 }
 
 void MainWindow::connectdb() {
@@ -60,12 +62,20 @@ void MainWindow::btnSubmitClicked() {
     if (query.exec(command)) {
         if (query.size() > 0) {
             QMessageBox::information(this, "Login Success", "You have successfully logged in!");
+            ui->stackedWidget->setCurrentWidget(ui->dashBoardPage);
         } else {
             QMessageBox::information(this, "Login Failed", "Login failed. Please try again.");
         }
     }
 }
 
+
+void MainWindow::stackWidgetCurrentPageChanged(int index){
+    qDebug() <<"Stack Widget Current Page Changed to " + QString::number(index) + " index";
+    if(index == 1){
+
+    }
+}
 
 void MainWindow::createBarChart(){
     QBarSet *set0 = new QBarSet("Jane");
